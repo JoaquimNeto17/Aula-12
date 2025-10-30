@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EsToDoList</title>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonte moderna -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .concluida .tarefa-texto {
+        text-decoration: line-through;
+        color: #9ca3af;
+      }
+
+      li {
+        transition: all 0.25s ease-in-out;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
+  </head>
+
+  <body
+    class="flex justify-center items-start min-h-screen pt-16 px-4 bg-gradient-to-br from-green-50 to-emerald-100"
+  >
+    <main
+      class="w-full max-w-xl bg-white border border-gray-100 rounded-3xl shadow-2xl p-8 transition duration-300 hover:shadow-green-300/40"
+    >
+      <!-- Cabeçalho -->
+      <header class="text-center mb-8">
+        <h1
+          class="text-5xl font-extrabold text-green-700 tracking-tight mb-2"
+        >
+          ✅ EsToDoList
+        </h1>
+        <p class="text-gray-500 text-sm">
+          Organize suas tarefas com estilo 🌿
+        </p>
+      </header>
+
+      <!-- Campo de nova tarefa -->
+      <section class="flex mb-8">
+        <label for="nova-tarefa-input" class="sr-only">Nova tarefa</label>
+        <input
+          type="text"
+          id="nova-tarefa-input"
+          placeholder="Digite uma nova tarefa..."
+          class="flex-grow border border-gray-300 rounded-l-xl p-4 text-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-4 focus:ring-green-100"
+        />
+        <button
+          id="adicionar-btn"
+          class="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white px-6 rounded-r-xl font-extrabold text-2xl shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-green-300 transition-all duration-300"
+          title="Adicionar tarefa"
+        >
+          +
+        </button>
+      </section>
+
+      <!-- Lista de tarefas -->
+      <ul id="lista-de-tarefas" class="space-y-4 divide-y divide-gray-100">
+        <!-- Tarefas serão inseridas dinamicamente -->
+      </ul>
+
+      <!-- Barra divisória -->
+      <div class="border-t border-gray-200 my-6"></div>
+
+      <!-- Pesquisa e filtro -->
+      <section
+        class="flex flex-col sm:flex-row gap-4 sm:gap-3 items-stretch sm:items-center"
+      >
+        <div class="flex-grow relative">
+          <label for="pesquisa-input" class="sr-only">Pesquisar</label>
+          <input
+            type="text"
+            id="pesquisa-input"
+            placeholder="🔍 Pesquisar tarefa..."
+            class="w-full border border-gray-300 rounded-xl p-4 text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-100"
+          />
+        </div>
+
+        <label for="filtro-select" class="sr-only">Filtrar tarefas</label>
+        <select
+          id="filtro-select"
+          class="border border-gray-300 rounded-xl p-4 text-gray-700 bg-white focus:outline-none focus:ring-4 focus:ring-blue-100 appearance-none"
+        >
+          <option value="todos">Todos</option>
+          <option value="ativos">Ativos</option>
+          <option value="concluidos">Concluídos</option>
+        </select>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="mt-10 text-center text-gray-400 text-sm">
+
+      </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
