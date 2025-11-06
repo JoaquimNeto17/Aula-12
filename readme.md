@@ -1,8 +1,26 @@
-Você é um desenvolvedor Sênior. Crie um `readme.md` em Markdown para o meu projeto de To-Do List.
+# ExToDoList
 
-O projeto se chama: [Nome do seu Projeto]
-As tecnologias usadas foram: HTML, Tailwind CSS e JavaScript (com localStorage).
-As funcionalidades são: Adicionar, excluir, marcar como concluída, pesquisar e filtrar tarefas.
-O objetivo foi praticar o desenvolvimento front-end.
+**ExToDoList** é um site criado para ajudar estudantes a organizarem suas tarefas de forma simples e prática. O objetivo é facilitar o controle das atividades escolares, evitando esquecimentos e contribuindo para uma rotina de estudos mais eficiente.
 
-Inclua seções como "Sobre o Projeto", "Funcionalidades", "Tecnologias" e "Como Usar".
+---
+
+## ✨ Funcionalidades
+
+- Adicionar tarefas
+- Marcar tarefas concluídas
+- Editar e excluir atividades
+- Interface intuitiva e fácil de usar
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- HTML  
+- CSS  
+- JavaScript
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **Joaquim**.
